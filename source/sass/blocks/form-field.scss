@@ -1,0 +1,37 @@
+.form-field {
+  padding-bottom: 15px;
+}
+
+.form-field__input {
+  padding: 10px 20px;
+  width: 100%;
+  height: 38px;
+  border-radius: 30px;
+  border: 0.5px solid $main-color;
+  background-color: #fff;
+
+  &::placeholder {
+    color: $gray-color;
+  }
+
+  &:disabled {
+    border: 0.5px solid $disabled-input;
+  }
+}
+
+.form-field__input.invalid {
+  border: 0.5px solid $error-color;
+}
+
+.form-field__error-mess {
+  display: none;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 7px;
+  color: $error-color;
+  line-height: 10px;
+}
+
+.form-field__input.invalid + .form-field__error-mess {
+  display: block;
+}

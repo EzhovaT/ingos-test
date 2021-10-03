@@ -1,0 +1,36 @@
+.advantage {
+  @media (min-width: $small-desktop-width) {
+    width: 260px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 310px;
+  }
+}
+
+.advantage__title {
+  font-family: "IngoStem Bold";
+  font-weight: 650;
+}
+
+.advantage__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: my-icon;
+
+}
+
+.advantage__item {
+  counter-increment: my-icon;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: $text-small-color;
+
+  &::before {
+    content: url('../img/plus.svg');
+    padding-right: 10px;
+  }
+}

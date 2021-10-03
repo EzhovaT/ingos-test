@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ингосстрах</title>
+  <link href="//db.onlinewebfonts.com/c/c417cc99db387c1a7ab9825ffc53747a?family=IngoStem+Bold" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page">
+
+  <div class="container">
+    <header class="header">
+      <a class="logo" href="https://www.ingos.ru/">Ингосстрах</a>
+      <div class="header__reference">
+        <a class="link-block" href="tel:+78002002947">
+          <img class="link-block__icon" src="img/phone.svg" alt="Иконка номера телефона для обратной связи" width="32" height="32">
+          <p class="link-block__descr">8 800 200 29 47</p>
+        </a>
+
+        <a class="link-block" href="#" download>
+          <img class="link-block__icon" src="img/rules.svg" alt="Иконка файла с правилами акции" width="32" height="32">
+          <p class="link-block__descr">Правила акции</p>
+        </a>
+      </div>
+    </header>
+
+    <main class="page__main">
+      <section class="tagline">
+        <img class="tagline__img" src="img/bg.png" alt="Изображение '73 года'" width="159" height="117">
+        <div class="tagline__box">
+          <p class="tagline__descr">Получите </p>
+          <h1 class="tagline__title">73 дня экспресс-каско и страхования имущества</h1>
+          <p class="tagline__descr">в честь нашего 73-летия!</p>
+        </div>
+      </section>
+
+      <form class="form" id="form" method="POST" action="#" enctype="multipart/form-data" autocomplete="off">
+        <p class="form__title">73 года с Вами!</p>
+        <p class="form__subtitle">С теми, кто дорожит своими достижениями</p>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__legend visually-hidden">Форма для бронирования</legend>
+          <div class="form-field">
+            <label class="form-field__label visually-hidden" for="user-name">Ф.И.О</label>
+            <input class="form-field__input" type="text" id="user-name" name="user-name" placeholder="Ф.И.О" required/>
+            <p class="form-field__error-mess"></p>
+          </div>
+          <div class="form-field">
+            <label class="form-field__label visually-hidden" for="user-phone">Номер телефона</label>
+            <input class="form-field__input" type="tel" id="user-phone" name="user-phone" placeholder="+7" required/>
+            <p class="form-field__error-mess"></p>
+          </div>
+          <div class="form-field">
+            <label class="form-field__label visually-hidden" for="user-email">Email</label>
+            <input class="form-field__input" type="text" id="user-email" name="user-email" placeholder="Email" required/>
+            <p class="form-field__error-mess">Заполните поле.</p>
+          </div>
+
+          <button class="form__button" type="submit">Забронировать</button>
+
+          <div class="form-field checkbox">
+            <label class="checkbox__label" for="contract">
+              <input class="checkbox__input" type="checkbox" id="contract" name="contract" required>
+              <span class="checkbox__span"></span>
+              <small class="checkbox__small-text">Подтверждаю согласие на обработку персональных данных и получение информации​ о других продуктах и услугах СПАО «Ингосстрах» и его партнеров.</small>
+            </label>
+          </div>
+        </fieldset>
+      </form>
+
+      <section class="offer">
+        <div class="offer__card offer__card_auto">
+          <h2 class="offer__title">Экспресс-КАСКО</h2>
+          <div class="advantage">
+            <p class="advantage__title">Доступно и просто:</p>
+            <ul class="advantage__list">
+              <li class="advantage__item">Выезд эксперта на место страхового случая;</li>
+              <li class="advantage__item">Техническая помощь на дороге;</li>
+              <li class="advantage__item">Страхование личных вещей в автомобиле.</li>
+            </ul>
+          </div>
+
+          <a class="offer__link" href="">Забронировать</a>
+        </div>
+
+        <div class="offer__card offer__card_property">
+          <h2 class="offer__title">Страхование имущества</h2>
+          <div class="advantage">
+            <p class="advantage__title">Наши преимущества:</p>
+            <ul class="advantage__list">
+              <li class="advantage__item">Страхование нетиповых рисков (например, повреждение имущества животными)​;</li>
+              <li class="advantage__item">Бесплатная профессиональная оценка имущества, урегулированию убытков.</li>
+            </ul>
+          </div>
+
+          <a class="offer__link" href="">Забронировать</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+      <p class="footer__info">Контактная информация:</p>
+      <div class="footer__links">
+        <a class="footer__link footer__link_inst" href="#">
+        </a>
+        <a class="footer__link footer__link_fb" href="#">
+        </a>
+        <a class="footer__link footer__link_vk" href="#">
+        </a>
+        <a class="footer__link footer__link_youtube" href="#">
+        </a>
+    </div>
+  </footer>
+
+  <div class="popup">
+    <div class="popup__window">
+      <div class="popup__block">
+        <button class="popup__close-btn" type="button" aria-label="Закрыть окно."></button>
+        <div class="popup__content">
+          <p class="popup__title">Спасибо, Ваша заявка принята.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.min.js"></script>
+</body>
+</html>

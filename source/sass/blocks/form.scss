@@ -1,0 +1,77 @@
+.form {
+  padding: 23px 0;
+  background-color: $main-dark-bg;
+  background-image: url('../img/mob-bg.svg');
+  background-size: contain;
+  background-position: bottom 10px center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image: url('../img/desk-bg.svg');
+    background-position: center;
+  }
+}
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
+.form__title {
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 25px;
+  color: $main-color;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 41px;
+
+  }
+}
+
+.form__subtitle {
+  margin: 5px 0 10px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
+}
+
+.form__button {
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 42px;
+  border-radius: 30px;
+  background-color: $gray-color;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+  }
+
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:active {
+    background-color: $main-color;
+  }
+}

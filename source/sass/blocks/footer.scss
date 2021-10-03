@@ -1,0 +1,40 @@
+.footer {
+  padding: 30px 10px;
+  background-color: $main-dark-bg;
+  text-align: center;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__link {
+  font-size: 0;
+  margin-right: 15px;
+}
+
+.footer__link {
+  width: 32px;
+  height: 32px;
+  display: block;
+  background-color: $gray-color;
+
+  &_inst {
+    mask-image: url("../img/inst.svg");
+  }
+  &_fb {
+    mask-image: url("../img/fb.svg");
+  }
+  &_vk {
+    mask-image: url("../img/vk.svg");
+  }
+  &_youtube {
+    mask-image: url("../img/youtube.svg");
+  }
+
+  &:hover {
+    background-color: $main-color;
+  }
+}
