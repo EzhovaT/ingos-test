@@ -54,6 +54,17 @@ userPhone.addEventListener("input", () => {
   valuePhone = verification(userPhone, regPhone, "Номеер не найден.");
 });
 
+function verSub( ...inputs) {
+  let res = inputs.every(input => input.classList.contains('valid'))
+  if(res) {
+    formBtn.classList.add('active');
+  } else {
+    formBtn.classList.remove('active');
+  }
+}
+
+form.addEventListener("input", () => {verSub(userName, userEmail, userPhone)});
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -72,6 +83,8 @@ form.addEventListener("submit", (e) => {
       input.value = "";
       input.classList.remove("valid");
     });
+
+    formBtn.classList.remove('active');
 
     checkbox.checked = false;
   } else {
