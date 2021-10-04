@@ -7,20 +7,27 @@
   width: 100%;
   height: 38px;
   border-radius: 30px;
-  border: 0.5px solid $main-color;
+  border: 0.5px solid $main-bg-color;
   background-color: #fff;
 
   &::placeholder {
     color: $gray-color;
   }
 
-  &:disabled {
-    border: 0.5px solid $disabled-input;
+  &:focus {
+    outline: 0.5px solid $main-color;
   }
 }
 
 .form-field__input.invalid {
-  border: 0.5px solid $error-color;
+  border-color: $error-color;
+}
+
+.form-field__input.valid {
+  background-image: url('../img/input-check.svg');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right 20px center;
 }
 
 .form-field__error-mess {

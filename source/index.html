@@ -28,7 +28,10 @@
 
     <main class="page__main">
       <section class="tagline">
-        <img class="tagline__img" src="img/bg.png" alt="Изображение '73 года'" width="159" height="117">
+        <picture class="tagline__picture">
+          <source class="tagline__image-source" type="image/webp" srcset="img/bg@1x.webp 1x, img/bg@2x.webp 2x"/>
+          <img class="tagline__img" width="159" height="117" src="img/bg@1x.png" srcset="img/bg@2x.png 2x" alt="Изображение '73 года'"/>
+        </picture>
         <div class="tagline__box">
           <p class="tagline__descr">Получите </p>
           <h1 class="tagline__title">73 дня экспресс-каско и страхования имущества</h1>
@@ -82,7 +85,7 @@
             </ul>
           </div>
 
-          <a class="offer__link" href="">Забронировать</a>
+          <a class="offer__link" href="#">Забронировать</a>
         </div>
 
         <div class="offer__card offer__card_property">
@@ -95,7 +98,7 @@
             </ul>
           </div>
 
-          <a class="offer__link" href="">Забронировать</a>
+          <a class="offer__link" href="#">Забронировать</a>
         </div>
       </section>
     </main>
@@ -104,13 +107,13 @@
   <footer class="footer">
       <p class="footer__info">Контактная информация:</p>
       <div class="footer__links">
-        <a class="footer__link footer__link_inst" href="#">
+        <a class="footer__link footer__link_inst" href="https://www.instagram.com/ingos.ru/">
         </a>
-        <a class="footer__link footer__link_fb" href="#">
+        <a class="footer__link footer__link_fb" href="https://www.facebook.com/ingos.ru/">
         </a>
-        <a class="footer__link footer__link_vk" href="#">
+        <a class="footer__link footer__link_vk" href="https://vk.com/ingos9565555">
         </a>
-        <a class="footer__link footer__link_youtube" href="#">
+        <a class="footer__link footer__link_youtube" href="https://www.youtube.com/c/IngosTV/featured">
         </a>
     </div>
   </footer>

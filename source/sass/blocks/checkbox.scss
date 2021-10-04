@@ -2,12 +2,10 @@
   text-align-last: left;
   position: relative;
   padding-top: 10px;
-
 }
 
 .checkbox__input {
   position: absolute;
-  // appearance: none;
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -34,6 +32,10 @@
   background-size: 12px;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.checkbox__input:focus + .checkbox__span {
+  border: 1.5px solid $input-check;
 }
 
 .checkbox__label {

@@ -13,35 +13,68 @@ function regexValidite(input, regex) {
 }
 
 function verification(input, regex, message) {
+  parent = input.closest(".form-field");
+  blockError = parent.querySelector(".form-field__error-mess");
+
   if (!regexValidite(input.value, regex)) {
+    input.classList.remove("valid");
     input.classList.add("invalid");
-    parent = input.closest(".form-field");
-    blockError = parent.querySelector(".form-field__error-mess");
     blockError.textContent = message;
     if (input.value === "") {
       blockError.textContent = "Заполните поле.";
     }
   } else {
-    input.classList.remove("invalid");
+    if (input.value.length <= 5) {
+      input.classList.remove("valid");
+      input.classList.add("invalid");
+      blockError.textContent = "Заполните поле.";
+    } else {
+      input.classList.remove("invalid");
+      input.classList.add("valid");
+      return true;
+    }
   }
 }
 
-userName.addEventListener("input", () => verification(userName, regName, "Проверьте поле на правильность заполения."));
-userEmail.addEventListener("input", () => verification(userEmail, regEmail, "Почта не найдена."));
-userPhone.addEventListener("input", () => verification(userPhone, regPhone, "Номеер не найден."));
+let valueName = "";
+let valuePhone = "";
+let valueMail = "";
+
+userName.addEventListener("input", () => {
+  valueName = verification(
+    userName,
+    regName,
+    "Проверьте поле на правильность заполения."
+  );
+});
+userEmail.addEventListener("input", () => {
+  valueMail = verification(userEmail, regEmail, "Почта не найдена.");
+});
+userPhone.addEventListener("input", () => {
+  valuePhone = verification(userPhone, regPhone, "Номеер не найден.");
+});
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const popup = document.querySelector(".popup"),
-    popupBtn = document.querySelector(".popup__close-btn"),
-    inputs = document.querySelectorAll("input");
 
-  popup.classList.add('popup_open');
-  popupBtn.addEventListener('click', () => {
-    popup.classList.remove('popup_open');
-  })
+  if (valueName && valueMail && valuePhone) {
+    const popup = document.querySelector(".popup"),
+      popupBtn = document.querySelector(".popup__close-btn"),
+      checkbox = document.querySelector("#contract"),
+      inputs = document.querySelectorAll("input");
 
-  inputs.forEach((input) => {
-    input.value = "";
-  });
+    popup.classList.add("popup_open");
+    popupBtn.addEventListener("click", () => {
+      popup.classList.remove("popup_open");
+    });
+
+    inputs.forEach((input) => {
+      input.value = "";
+      input.classList.remove("valid");
+    });
+
+    checkbox.checked = false;
+  } else {
+    alert("Проверьте все поля на правильность заполения.");
+  }
 });

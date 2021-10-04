@@ -10,9 +10,14 @@
   }
 }
 
-.tagline__img {
+.tagline__picture {
   @media (min-width: $tablet-width) {
     order: 2;
+  }
+}
+
+.tagline__img {
+  @media (min-width: $tablet-width) {
     width: 360px;
     height: auto;
   }
@@ -40,6 +45,7 @@
 }
 
 .tagline__title {
+  margin: 0;
   font-weight: bold;
   font-size: 26px;
   line-height: 26px;
