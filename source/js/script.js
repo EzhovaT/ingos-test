@@ -1,5 +1,5 @@
 const regEmail = /^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$/;
-const regName = /^(?=.{1,30}$)[А-Яа-яё][А-Яа-яё]*(?: [А-Яа-яё]+)*$/;
+const regName = /^(?=.{1,35}$)[А-Яа-яё][А-Яа-яё]*(?: [А-Яа-яё]+)*$/;
 
 const userName = document.querySelector("#user-name"),
   userPhone = document.querySelector("#user-phone"),
