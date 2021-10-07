@@ -71,9 +71,10 @@ function onPhoneInput (e) {
     selectionStart = input.selectionStart;
 
     if(input.value.length <= 17) {
-      inValidInput(input, "Номеер не найден.")
+      inValidInput(input, "Номер не найден.")
     } else {
       validInput(input);
+      return true;
     }
 
     if(!inputNumbValue) {
@@ -104,7 +105,6 @@ function onPhoneInput (e) {
       if(inputNumbValue.length >= 10) {
         formatInputValue += "-" + inputNumbValue.substring(9, 11);
       }
-
     } else {
       formatInputValue = "+" + inputNumbValue;
     }
@@ -138,7 +138,9 @@ function onPhonePaste(e) {
   }
 }
 
-userPhone.addEventListener('input', onPhoneInput);
+userPhone.addEventListener('input', (e) =>{
+  valuePhone = onPhoneInput(e);
+} );
 userPhone.addEventListener('keydown', onPhoneKeyDown);
 userPhone.addEventListener('paste', onPhonePaste);
 
